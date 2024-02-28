@@ -5,27 +5,35 @@
 }
 body{
     background-color: #FFC800;
+    
 }
 main{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
+    min-width: 1000px;
 }
 .loadbox{
-    height: 50%;
-    width:35%;
+    /* z-index: 1; */
+    height: auto;
+    width:50%;
     background-color: #fada67;
     border: 3px solid brown;
+    /* border-radius: ; */
+    /* position: absolute; */
 }
 img{
-    height: 60%;
+    height:auto;
     width: 100%;
     margin-bottom: 5%;
+    
 }
 .start_button{
-    height: 10%;
+    /* position: relative; */
+    height: auto;
     width: 50%;
     border: 3px solid brown;
     font-family: "Libre Franklin", sans-serif;
@@ -36,6 +44,8 @@ img{
     background-color: #FFC800;
     border-radius: 5px;
     box-shadow: -1px 4px 28px -10px rgba(165,42,42,1);
+    padding-top: 2%;
+    padding-bottom: 2%;
     
 }
 .start_button_div{
@@ -50,15 +60,50 @@ img{
 .music_off, .howtoplay{
     margin-right: 5%;
     margin-left: 5%;
-    height: 8%;
+    height: auto;
     width: 8%;
     border-radius: 50%;
     background-color: #FFC800;
     border: 3px solid brown;
     box-shadow: -1px 4px 28px -10px rgba(165,42,42,1);
     transition: box-shadow 0.15s;
+    margin-bottom: 2%;
 }
 
 .music_off:active,.howtoplay:active,.start_button:active{
     box-shadow: none;
 }
+/* .tutorial{
+    /* height: auto;
+    width: auto; */
+    /* position: absolute;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    border: 3px solid brown; */ 
+    /* background-color: #fada67;
+    font-size: 25px;
+    
+    height: 50%;
+    width: 50%;
+    top: 0;
+    left: 0; */
+    /* margin-left: 36vb;
+    margin-right: auto;
+    margin-top: 35vh; */
+/* } */
+/* .crossbutton{ */
+    /* height: 4%;
+    width: 4%;
+    background-color: #fada67;
+    border: none;
+}
+.cross{
+    display:flex;
+    flex-direction: row;
+    justify-content: end;
+} */
+/* p{
+    font-weight: bold;
+} */

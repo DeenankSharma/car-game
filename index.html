@@ -10,7 +10,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <main>
+        <audio class="mainbg" src="music/hill-climb-racing_1.mp3" autoplay loop ></audio>
+
+        <!-- <div class="tutorial">
+            <div class="cross">
+                <button class="crossbutton"><img  class="crossimg" src="styles/cross.png"></button>
+            </div>
+            <p>Rules</p>
+            <ul>
+                <li>The goal is to dodge the obstacles using arrow keys</li>
+                <li>The speed will increasing automatically</li>
+                <li>For every obstacle you dodge you will earn a point</li>
+                <li>The game will be over when you hit an obstacle</li>
+            </ul>
+            <p>Controls</p>
+            <ul>
+                <li>Press <b>left arrow key</b> to move left</li>
+                <li>Press <b>right arrow key</b> to move right</li>
+            </ul>
+        </div> -->
+
         <div class="loadbox">
          <img src="styles/intro.jpg" alt="Gotta Dodge'em All">
          <div class="start_button_div">
@@ -18,14 +39,15 @@
          </div>
         <div class="intropage_buttons">
             <button class="music_off">
-                <img src="styles/volume-up.png">
+                <img class="music" src="styles/volume-up.png">
             </button>
             <button class="howtoplay">
                 <img src="styles/question-sign.png">
             </button>
         </div>
         </div>
+
     </main>
-    
+    <script src="scripts/loadbox.js"></script>
 </body>
 </html>
