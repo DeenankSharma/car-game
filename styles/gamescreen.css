@@ -2,31 +2,38 @@
     padding: 0;
     margin: 0;
 }
-img{
+.car{
     position: absolute;
     transform: rotate(90deg);
     height: 15%;
-    width: 40%;
+    width: 30%;
     bottom: 50px;
+    right: 50px;
     /*right: 0; */
 
 }
+
 .obstacle1,.obstacle2,.obstacle3,.obstacle4{
     transform: rotate(0deg);
     position: absolute;
+    width: 30%;
 }
 .obstacle1{
     bottom: 400px;
+    left: 50px;
 }
 .obstacle2{
-    right: 0;
+    right: 50px;
     bottom: 900px;
+
 }
 .obstacle3{
     bottom: 1400px;
+    left: 50px;
 }
 .obstacle4{
     bottom: 1900px;
+    right: 50px;
 }
 
 body{
