@@ -1,5 +1,6 @@
 const car =document.querySelector(".car");
 const obstacle=document.querySelector(".obstacle");
+const score=document.querySelector(".score");
 document.addEventListener("keydown",(e)=>{
     if(e.key==="ArrowRight"){
         car.style.right = "50px";
@@ -14,6 +15,7 @@ var animationIterations = 0;
 
 obstacle.addEventListener('animationiteration', () => {
     animationIterations++;
+    score.textContent=("Score :" + animationIterations);
     let x=Math.floor(Math.random()*2);
     if (x===1) {
         obstacle.style.right = '50px';
@@ -29,6 +31,7 @@ obstacle.addEventListener('animationiteration', () => {
     // animationDuration=(parseFloat(animationDuration)/1.05);
     // obstacle.style.setProperty('animation-duration', animationDuration + 's');
 });
+
 
 // let carcoord=car.getBoundingClientRect();
 // console.log(carcoord);

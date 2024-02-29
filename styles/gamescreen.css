@@ -20,25 +20,11 @@
 .obstacle{
     top: -200px;
     right: 50px;
-    animation-name: obstaclecourse;
+    /* animation-name: obstaclecourse; */
     animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-/* .obstacle2{
-    right: 50px;
-    bottom: 1000px;
-
-} */
-/* .obstacle3{
-    bottom: 1400px;
-    left: 50px;
-}
-.obstacle4{
-    bottom: 1900px;
-    right: 50px;
-} */
-
 body{
     background-color: #FFC800;
     display: flex;
@@ -49,11 +35,8 @@ body{
     width: 40%;
     height: 100vh;
     background-color: black;
-    /* display: flex; */
-    /* justify-content: space-between; */
     padding: 0;
     overflow: hidden;
-
 }
 .lline,.rline{
     position: absolute;
@@ -83,7 +66,7 @@ body{
     /* animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards; */
-    animation-name: roadcourse;
+    /* animation-name: roadcourse; */
     animation-duration: 8.65s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -103,4 +86,21 @@ body{
 @keyframes roadcourse {
     from{transform: translateY(-600px);}
     to{transform: translateY(1400px);}
+}
+.score{
+    position: absolute;
+    background-color: #FFC800;
+    border: 3px solid brown;
+    /* padding-left: 4%; */
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal; 
+    height:5%;
+    font-size: 2em;
+    width: 40%;
+    font-family: "Libre Franklin", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
 }
