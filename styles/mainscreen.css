@@ -73,29 +73,30 @@ img{
 .music_off:active,.howtoplay:active,.start_button:active{
     box-shadow: none;
 }
-/* .tutorial{
+.tutorial{
     /* height: auto;
     width: auto; */
-    /* position: absolute;
+    overflow: hidden;
+    position: absolute;
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    border: 3px solid brown; */ 
-    /* background-color: #fada67;
-    font-size: 25px;
-    
-    height: 50%;
-    width: 50%;
-    top: 0;
-    left: 0; */
-    /* margin-left: 36vb;
-    margin-right: auto;
-    margin-top: 35vh; */
-/* } */
-/* .crossbutton{ */
-    /* height: 4%;
-    width: 4%;
+    border: 3px solid brown;
+    background-color: #fada67;
+    font-size: 150%;
+    height: 35%;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 0;
+}
+.crossbutton{ 
+     height: 5%;
+    width: 5%;
     background-color: #fada67;
     border: none;
 }
@@ -103,7 +104,7 @@ img{
     display:flex;
     flex-direction: row;
     justify-content: end;
-} */
-/* p{
+} 
+ p{
     font-weight: bold;
-} */
+}

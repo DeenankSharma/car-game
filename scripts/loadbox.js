@@ -2,6 +2,8 @@ const musicbtn = document.querySelector(".music_off");
 const musicbtnimg=document.querySelector(".music")
 const musicbgfile=document.querySelector(".mainbg");
 const letsgobtn =document.querySelector(".start_button");
+const howtoplaybtn=document.querySelector(".howtoplay");
+const tutbox = document.querySelector(".tutorial");
 console.dir(musicbgfile)
 musicbtn.addEventListener("click",()=>{
     if (musicbtnimg.getAttribute("src")==="styles/volume-up.png") {
@@ -15,5 +17,13 @@ musicbtn.addEventListener("click",()=>{
 })
 letsgobtn.addEventListener("click",()=>{
     window.location.href="index2.html";
+})
+console.dir(tutbox);
+howtoplaybtn.addEventListener("click",()=>{
+    if (tutbox.style.display==="flex") {
+        tutbox.style.display="none";
+    } else {
+        tutbox.style.display="flex";
+    }
 })
 
