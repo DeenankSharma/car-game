@@ -14,12 +14,12 @@ var animationIterations = 0;
 
 obstacle.addEventListener('animationiteration', () => {
     animationIterations++;
-
-    if (animationIterations % 2 === 1) {
+    let x=Math.floor(Math.random()*2);
+    if (x===1) {
         obstacle.style.right = '50px';
         obstacle.style.left = '';
         
-    } else if (animationIterations % 2 === 0) {
+    } else if (x===0) {
         obstacle.style.left = '50px';
         obstacle.style.right = '';
     }
