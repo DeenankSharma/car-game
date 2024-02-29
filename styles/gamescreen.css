@@ -10,31 +10,34 @@
     bottom: 50px;
     right: 50px;
     /*right: 0; */
-
 }
 
-.obstacle1,.obstacle2,.obstacle3,.obstacle4{
+.obstacle{
     transform: rotate(0deg);
     position: absolute;
     width: 30%;
 }
-.obstacle1{
-    bottom: 400px;
-    left: 50px;
-}
-.obstacle2{
+.obstacle{
+    top: -200px;
     right: 50px;
-    bottom: 900px;
-
+    animation-name: obstaclecourse;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-.obstacle3{
+/* .obstacle2{
+    right: 50px;
+    bottom: 1000px;
+
+} */
+/* .obstacle3{
     bottom: 1400px;
     left: 50px;
 }
 .obstacle4{
     bottom: 1900px;
     right: 50px;
-}
+} */
 
 body{
     background-color: #FFC800;
@@ -72,9 +75,15 @@ body{
     /* left: 50; */
     height: 100vh;
     width: 5%;
+    bottom: 350px;
     /* display: flex; */
     /* flex-direction: column; */
     /* justify-content: space-evenly; */
+    /* animation-name: roadanime; */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    
 }
 .white_stripe{
     height: 15%;
@@ -82,4 +91,8 @@ body{
     width: 100%;
     margin-top: 55%;
     margin-bottom: 55%;
+}
+@keyframes obstaclecourse {
+    from{transform: translateY(-200px);}
+    to{transform: translateY(1200px);}
 }
