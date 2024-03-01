@@ -1,6 +1,7 @@
 const car =document.querySelector(".car");
 const obstacle=document.querySelector(".obstacle");
 const score=document.querySelector(".score");
+const scoreplus=new Audio('music/sound effects/coin.mp3');
 document.addEventListener("keydown",(e)=>{
     if(e.key==="ArrowRight"){
         car.style.right = "50px";
@@ -16,6 +17,7 @@ var animationIterations = 0;
 obstacle.addEventListener('animationiteration', () => {
     animationIterations++;
     score.textContent=("Score :" + animationIterations);
+    scoreplus.play();
     let x=Math.floor(Math.random()*2);
     if (x===1) {
         obstacle.style.right = '50px';
