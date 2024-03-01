@@ -9,7 +9,6 @@
     width: 30%;
     bottom: 50px;
     right: 50px;
-    /*right: 0; */
 }
 
 .obstacle{
@@ -20,7 +19,7 @@
 .obstacle{
     top: -200px;
     right: 50px;
-    /* animation-name: obstaclecourse; */
+    animation-name: obstaclecourse;
     animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -62,11 +61,7 @@ body{
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
-    /* animation-name: roadanime; */
-    /* animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards; */
-    /* animation-name: roadcourse; */
+    animation-name: roadcourse;
     animation-duration: 8.65s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -104,3 +99,27 @@ body{
     justify-content: center;
     z-index: 100;
 }
+.music_off{
+    margin-right: 5%;
+    margin-left: 5%;
+    height: auto;
+    width: 8%;
+    border-radius: 50%;
+    background-color: #FFC800;
+    border: 3px solid brown;
+    box-shadow: -1px 4px 28px -10px rgba(165,42,42,1);
+    transition: box-shadow 0.15s;
+    position:absolute;
+    right: 0;
+}
+
+.music_off:active{
+    box-shadow: none;
+}
+img{
+    height:auto;
+    width: 100%;
+    margin-bottom: 5%;
+    
+}
+

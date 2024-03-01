@@ -1,7 +1,14 @@
 const car =document.querySelector(".car");
+const musicbtn = document.querySelector(".music_off");
+const musicbtnimg=document.querySelector(".music");
+const musicbgfile=document.querySelector(".mainbg");
 const obstacle=document.querySelector(".obstacle");
 const score=document.querySelector(".score");
 const scoreplus=new Audio('music/sound effects/coin.mp3');
+const clickmusic=new Audio('music/sound effects/click.mp3');
+const btn=document.querySelectorAll("button");
+
+let scoring=true;
 document.addEventListener("keydown",(e)=>{
     if(e.key==="ArrowRight"){
         car.style.right = "50px";
@@ -12,12 +19,18 @@ document.addEventListener("keydown",(e)=>{
         car.style.right = '';
     }
 })
+btn.forEach((button)=>{
+    button.addEventListener("click",()=>{
+    clickmusic.play();
+})})
 var animationIterations = 0;
 
 obstacle.addEventListener('animationiteration', () => {
     animationIterations++;
     score.textContent=("Score :" + animationIterations);
-    scoreplus.play();
+    if(scoring===true){
+        scoreplus.play();
+    }
     let x=Math.floor(Math.random()*2);
     if (x===1) {
         obstacle.style.right = '50px';
@@ -35,11 +48,19 @@ obstacle.addEventListener('animationiteration', () => {
 });
 
 
-// let carcoord=car.getBoundingClientRect();
-// console.log(carcoord);
-// let obscoord=obstacle.getBoundingClientRect();
-// console.log(obscoord)
 console.log(obstacle.style.top);
 if((obstacle.style.top==='550px' && obstacle.style.right==='50px' && car.style.right==='50px')|| (obstacle.style.top==='550px' && obstacle.style.left==='50px' && car.style.left==='50px')){
     obstacle.style.animationName='';
 }
+musicbtn.addEventListener("click",()=>{
+    if (musicbtnimg.getAttribute("src")==="styles/volume-up.png") {
+        musicbtnimg.setAttribute("src","styles/no-sound.png");
+        musicbgfile.setAttribute("src"," ");
+        scoring=false;
+    }
+    else{
+        musicbtnimg.setAttribute("src","styles/volume-up.png");
+        musicbgfile.setAttribute("src","music/hill-climb-racing_1.mp3");
+        scoring=true;
+    }
+})
