@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFC800;
+}
+
+.gameoverdiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #fada67;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 200;
+    display: none;
+}
+
+.gameoverimg {
+    width: 500px; 
+    height: auto; 
+    /* transform: scale(1.5); */
+    margin-bottom: 20px;
+}
+
+.saveprogress {
+    margin-bottom: 10px;
+}
+
+.detail_submission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 80%; 
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.submit {
+    background-color:transparent  ;
+    border: none;
+    /* padding: 10px; */
+    border-radius: 5px;
+    cursor: pointer;
+}
+.saveprogress{
+    font-size: 1.5em;
+    font-family: "Libre Franklin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: brown;
+}
+
+.submitimage {
+    width: 60px; 
+    height: auto; 
+   
+}
+
+.reset,
+.homescreen,.stats {
+    /* background-color: transparent; */
+    /* border: none; */
+    cursor: pointer;
+    margin-right: 10px;
+    background-color: #FFC800;
+    border: 3px solid brown;
+    font-size: 1.5em;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: "Libre Franklin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: brown;
+}

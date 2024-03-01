@@ -8,6 +8,7 @@ const scoreplus=new Audio('music/sound effects/coin.mp3');
 const clickmusic=new Audio('music/sound effects/click.mp3');
 const btn=document.querySelectorAll("button");
 const division=document.querySelector(".division");
+const gameoverdiv=document.querySelector(".gameoverdiv");
 
 // var obsheight=obstacle.getBoundingClientRect().height;
 // var obswidth=obstacle.getBoundingClientRect().width;
@@ -17,14 +18,14 @@ const division=document.querySelector(".division");
 // var cary=car.getBoundingClientRect().y;
 // var obsx=car.getBoundingClientRect().x;
 // var obsy=car.getBoundingClientRect().y;
- 
+let turning=true;
 let scoring=true;
 document.addEventListener("keydown",(e)=>{
-    if(e.key==="ArrowRight"){
+    if(e.key==="ArrowRight" && turning===true){
         car.style.right = "50px";
         car.style.left = '';
     }
-    else if(e.key==="ArrowLeft"){
+    else if(e.key==="ArrowLeft" && turning===true){
         car.style.left = "50px";
         car.style.right = '';
     }
@@ -108,7 +109,8 @@ function getpositions() {
     ) {
         obstacle.classList.add("paused");
         division.classList.add("paused");
-        
+        turning=false;
+        gameoverdiv.style.display="block";
 
     } else {
         obstacle.classList.remove("paused");

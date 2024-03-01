@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gotta Dodge'em All</title>
     <link rel="stylesheet" href="styles/gamescreen.css">
+    <link rel="stylesheet" href="styles/gameover.css">
 </head>
 <body>
-    <audio class="mainbg" src="music/hill-climb-racing_1.mp3" autoplay loop ></audio>
+    <div class="gameoverdiv">
+        <img class="gameoverimg" src="cars/gameover.png">
+        <p class="saveprogress">Save your progress :</p>
+    <div class="detail_submission">
+        <input type="text" name="player_name" id="player_name" placeholder="Enter your name">
+        <button class="submit">
+            <img class="submitimage" src="cars/arrow.png">
+        </button>
+    </div>
+        <button class="reset">Reset</button>
+        <button class="homescreen">Home</button>
+        <button class="stats">Records</button>
+    </div>
+    <!-- <audio class="mainbg" src="music/hill-climb-racing_1.mp3" autoplay loop ></audio> -->
     <div class="road">
         <div class="score">
             Score : 0
