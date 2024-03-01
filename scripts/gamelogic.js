@@ -49,7 +49,7 @@ musicbtn.addEventListener("click",()=>{
 })
 obstacle.addEventListener('animationiteration', () => {
     animationIterations++;
-    score.textContent=("Score :" + animationIterations);
+    score.textContent=("Score : " + animationIterations);
     if(scoring===true){
         scoreplus.play();
     }
