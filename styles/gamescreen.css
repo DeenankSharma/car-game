@@ -122,4 +122,6 @@ img{
     margin-bottom: 5%;
     
 }
-
+.paused{
+    animation-play-state: paused;
+}
