@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testrun</title>
+    <style>
+        div{
+            height: 50px;
+            width: 50px;
+        }
+        .div1{
+            background-color: red;
+            position: absolute;
+            left: 100px;
+            top: 500px;
+
+        }
+        .div2{
+            background-color: blue;
+            position: absolute;
+            left: 100px;
+            animation: move 6s linear infinite;
+       }
+        @keyframes move {
+            from{transform: translateY(-100px);}
+            to{transform: translateY(1000px);}
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+<script>
+    const div1=document.querySelector(".div1");
+    const div2=document.querySelector(".div2");
+    function collide(){
+        const elem=document.elementFromPoint(100,500);
+        if(elem.className==='div2'){
+            console.log(elem);
+            div2.style.animation="none";
+            div2.style.transform="translateY(450px)";
+        }  
+    }
+    setInterval(collide,100);
+</script>
+</html>
