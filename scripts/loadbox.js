@@ -6,9 +6,9 @@ const howtoplaybtn=document.querySelector(".howtoplay");
 const tutbox = document.querySelector(".tutorial");
 const clickmusic=new Audio('music/sound effects/click.mp3');
 const btn=document.querySelectorAll("button");
-console.dir(btn);
-let scoring=true;
 
+
+let scoring=true;
 btn.forEach((button)=>{
     button.addEventListener("click",()=>{
     clickmusic.play();
@@ -22,13 +22,17 @@ musicbtn.addEventListener("click",()=>{
     else{
         musicbtnimg.setAttribute("src","styles/volume-up.png");
         musicbgfile.setAttribute("src","music/hill-climb-racing_1.mp3");
-        scoring=true;
+        scoring=true; 
     }
 })
 letsgobtn.addEventListener("click",()=>{
-    window.location.href="index2.html";
+    console.log("Let's go button clicked!");
+        window.location.href="index2.html";
+
+
+
 })
-console.dir(tutbox);
+
 howtoplaybtn.addEventListener("click",()=>{
     if (tutbox.style.display==="flex") {
         tutbox.style.display="none";
@@ -36,7 +40,3 @@ howtoplaybtn.addEventListener("click",()=>{
         tutbox.style.display="flex";
     }
 })
-letsgobtn.addEventListener("click",()=>{
-    window.location.href="index2.html";
-})
-

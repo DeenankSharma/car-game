@@ -9,6 +9,10 @@ const clickmusic=new Audio('music/sound effects/click.mp3');
 const btn=document.querySelectorAll("button");
 const division=document.querySelector(".division");
 const gameoverdiv=document.querySelector(".gameoverdiv");
+const crash =new Audio('music/crash-7075.mp3');
+const drive=new Audio('music/car-changing-gears-sound-188962.mp3')
+const turn =new Audio('music/mixkit-arcade-retro-changing-tab-206.mp3');
+const gameoverdivmusic = new Audio('music/mixkit-little-piano-game-over-1944.mp3');
 
 // var obsheight=obstacle.getBoundingClientRect().height;
 // var obswidth=obstacle.getBoundingClientRect().width;
@@ -18,16 +22,26 @@ const gameoverdiv=document.querySelector(".gameoverdiv");
 // var cary=car.getBoundingClientRect().y;
 // var obsx=car.getBoundingClientRect().x;
 // var obsy=car.getBoundingClientRect().y;
+let hascrashed=false;
 let turning=true;
 let scoring=true;
+
+
+drive.play();
+drive.loop=true;
+
 document.addEventListener("keydown",(e)=>{
     if(e.key==="ArrowRight" && turning===true){
         car.style.right = "50px";
         car.style.left = '';
+        console.log('car is turning right');
+        turnsound();
     }
     else if(e.key==="ArrowLeft" && turning===true){
         car.style.left = "50px";
         car.style.right = '';
+        console.log('car is turning left');
+        turnsound();
     }
 })
 btn.forEach((button)=>{
@@ -110,12 +124,28 @@ function getpositions() {
         obstacle.classList.add("paused");
         division.classList.add("paused");
         turning=false;
-        gameoverdiv.style.display="block";
-
+        if(hascrashed===false){
+            soundflow();
+        }
     } else {
         obstacle.classList.remove("paused");
         division.classList.remove("paused");
+        hascrashed=false;
     }
 }
 
 setInterval(getpositions, 500);
+
+const soundflow= async() =>{
+    await crash.play();
+    hascrashed=true;
+    drive.pause();
+    musicbgfile.pause();
+    setTimeout(()=>{
+        gameoverdivmusic.play();
+        gameoverdiv.style.display="block";
+    },1000)
+}
+const turnsound = async()=>{
+    await turn.play();
+}
