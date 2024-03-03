@@ -25,7 +25,7 @@
     animation-timing-function: linear;
 }
 body{
-    background-color: #FFC800;
+    background-color: #711DB0;
     display: flex;
     justify-content: center;
 }
@@ -42,7 +42,7 @@ body{
     height: 100vh;
     width:1%;
     border: 5px solid black;
-    background-color: #FFC800;
+    background-color: #FFA732;
     margin: 0;
 }
 .lline{
@@ -84,8 +84,11 @@ body{
 }
 .score{
     position: absolute;
-    background-color: #FFC800;
-    border: 3px solid brown;
+    background-color: #FFA732;
+    border: 3px solid #FFA732;
+    border-radius: 2%;
+    margin-top: 1%;
+    margin-left: 2%;
     /* padding-left: 4%; */
     font-optical-sizing: auto;
     font-weight: 700;
@@ -100,17 +103,19 @@ body{
     z-index: 100;
 }
 .music_off{
+    margin-top: 1%;
     margin-right: 5%;
     margin-left: 5%;
     height: auto;
     width: 8%;
     border-radius: 50%;
-    background-color: #FFC800;
-    border: 3px solid brown;
+    background-color: #FFA732;
+    border: 3px solid #FFA732;
     box-shadow: -1px 4px 28px -10px rgba(165,42,42,1);
     transition: box-shadow 0.15s;
     position:absolute;
     right: 0;
+    z-index: 200;
 }
 
 .music_off:active{

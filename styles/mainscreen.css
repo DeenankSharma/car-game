@@ -1,16 +1,16 @@
 *{
     padding: 0;
     margin: 0;
-    /* background-color: #FFC800; */
+    /* background-color: #FFA732; */
 }
 body{
-    background-color: #FFC800;
+    background-color: #711DB0;
     
 }
 main{
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content:     center;
     align-items: center;
     height: 100vh;
     width: 100vw;
@@ -20,9 +20,9 @@ main{
     /* z-index: 1; */
     height: auto;
     width:50%;
-    background-color: #fada67;
-    border: 3px solid brown;
-    /* border-radius: ; */
+    background-color: #b65dfb;
+    border: 3px solid #FFA732;
+    border-radius: 1%;
     /* position: absolute; */
 }
 img{
@@ -35,13 +35,13 @@ img{
     /* position: relative; */
     height: auto;
     width: 50%;
-    border: 3px solid brown;
+    border: 3px solid #FFA732;
     font-family: "Libre Franklin", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     font-size: 2em;
-    background-color: #FFC800;
+    background-color: #FFA732;
     border-radius: 5px;
     box-shadow: -1px 4px 28px -10px rgba(165,42,42,1);
     padding-top: 2%;
@@ -63,8 +63,8 @@ img{
     height: auto;
     width: 8%;
     border-radius: 50%;
-    background-color: #FFC800;
-    border: 3px solid brown;
+    background-color: #FFA732;
+    border: 3px solid #FFA732;
     box-shadow: -1px 4px 28px -10px rgba(165,42,42,1);
     transition: box-shadow 0.15s;
     margin-bottom: 2%;
@@ -82,7 +82,7 @@ img{
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    border: 3px solid brown;
+    border: 3px solid #FFA732;
     background-color: #fada67;
     font-size: 150%;
     height: 35%;

@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #FFC800;
+    background-color: #ffb24d;
 }
 
 .gameoverdiv {
@@ -11,7 +11,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: #fada67;
+    background-color: #FFA732;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -74,7 +74,7 @@ input[type="text"] {
     /* border: none; */
     cursor: pointer;
     margin-right: 10px;
-    background-color: #FFC800;
+    background-color: #FFA732;
     border: 3px solid brown;
     font-size: 1.5em;
     padding-left: 2%;
@@ -86,4 +86,5 @@ input[type="text"] {
     font-weight: 700;
     font-style: normal;
     color: brown;
+    border-radius:15%;
 }
